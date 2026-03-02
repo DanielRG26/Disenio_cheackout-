@@ -7,69 +7,73 @@ export default function Home() {
       ════════════════════════════════════ */}
       <header style={{ backgroundColor: "#0c1380" }}>
 
-        {/* Top navbar */}
-        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: "18px 48px" }}>
-          <button style={{ display: "flex", alignItems: "center", gap: "8px", color: "rgba(255,255,255,0.75)", fontSize: "13px", background: "none", border: "none", cursor: "pointer" }}>
-            <svg width="15" height="15" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
-              <path d="M19 12H5M12 5l-7 7 7 7" strokeLinecap="round" strokeLinejoin="round"/>
-            </svg>
-            Go Back
-          </button>
-
-          <span style={{ color: "white", fontWeight: 900, fontSize: "26px", letterSpacing: "6px" }}>2019</span>
-
-          <button style={{ background: "none", border: "none", cursor: "pointer", display: "flex", flexDirection: "column", gap: "5px" }}>
-            <span style={{ display: "block", width: "22px", height: "2px", backgroundColor: "white" }}></span>
-            <span style={{ display: "block", width: "22px", height: "2px", backgroundColor: "white" }}></span>
-          </button>
+        {/* Top navbar - centrado */}
+        <div style={{ padding: "18px 40px" }}>
+          <div style={{ maxWidth: "980px", margin: "0 auto", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+            <button style={{ display: "flex", alignItems: "center", gap: "8px", color: "rgba(255,255,255,0.75)", fontSize: "13px", background: "none", border: "none", cursor: "pointer" }}>
+              <svg width="15" height="15" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
+                <path d="M19 12H5M12 5l-7 7 7 7" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+              Go Back
+            </button>
+            
+            <span style={{ color: "white", fontWeight: 900, fontSize: "26px", letterSpacing: "6px" }}>2019</span>
+            
+            <button style={{ background: "none", border: "none", cursor: "pointer", display: "flex", flexDirection: "column", gap: "5px" }}>
+              <span style={{ display: "block", width: "22px", height: "2px", backgroundColor: "white" }}></span>
+              <span style={{ display: "block", width: "22px", height: "2px", backgroundColor: "white" }}></span>
+            </button>
+          </div>
         </div>
 
-        {/* Stepper */}
-        <div style={{ margin: "0 32px 28px", backgroundColor: "#1020a0", borderRadius: "12px", padding: "16px 36px", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-          <div style={{ display: "flex", alignItems: "center", gap: "36px" }}>
+        {/* Stepper - más compacto */}
+        <div style={{ padding: "0 40px", paddingBottom: "28px" }}>
+          <div style={{ maxWidth: "980px", margin: "0 auto", backgroundColor: "#1a2db5", borderRadius: "12px", padding: "20px 36px", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+            <div style={{ display: "flex", alignItems: "center", gap: "32px" }}>
 
-            {/* Step 1 ✓ */}
-            <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-              <div style={{ width: "36px", height: "36px", borderRadius: "50%", backgroundColor: "#f5a623", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
-                <svg width="16" height="16" fill="none" stroke="#0c1380" strokeWidth="3" viewBox="0 0 24 24">
-                  <path d="M5 13l4 4L19 7" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
+              {/* Step 1 ✓ */}
+              <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+                <div style={{ width: "34px", height: "34px", borderRadius: "50%", backgroundColor: "#f5a623", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+                  <svg width="15" height="15" fill="none" stroke="#0c1380" strokeWidth="3" viewBox="0 0 24 24">
+                    <path d="M5 13l4 4L19 7" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </div>
+                <span style={{ color: "white", fontSize: "13px", fontWeight: 500 }}>Personal details</span>
               </div>
-              <span style={{ color: "white", fontSize: "13px", fontWeight: 500 }}>Personal details</span>
+
+              {/* Step 2 - activo */}
+              <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+                <div style={{ width: "34px", height: "34px", borderRadius: "50%", border: "2px solid white", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+                  <span style={{ color: "white", fontSize: "13px", fontWeight: 700 }}>2</span>
+                </div>
+                <span style={{ color: "white", fontSize: "13px", fontWeight: 500 }}>Order details</span>
+              </div>
+
+              {/* Step 3 */}
+              <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+                <div style={{ width: "34px", height: "34px", borderRadius: "50%", backgroundColor: "rgba(12,19,128,0.4)", border: "1px solid rgba(255,255,255,0.2)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+                  <span style={{ color: "rgba(255,255,255,0.4)", fontSize: "13px", fontWeight: 700 }}>3</span>
+                </div>
+                <span style={{ color: "rgba(255,255,255,0.4)", fontSize: "13px" }}>Payment</span>
+              </div>
+
+              {/* Step 4 */}
+              <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+                <div style={{ width: "34px", height: "34px", borderRadius: "50%", backgroundColor: "rgba(12,19,128,0.4)", border: "1px solid rgba(255,255,255,0.2)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+                  <span style={{ color: "rgba(255,255,255,0.4)", fontSize: "13px", fontWeight: 700 }}>4</span>
+                </div>
+                <span style={{ color: "rgba(255,255,255,0.4)", fontSize: "13px" }}>Confirmation</span>
+              </div>
             </div>
 
-            {/* Step 2 - activo */}
-            <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-              <div style={{ width: "36px", height: "36px", borderRadius: "50%", border: "2px solid white", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
-                <span style={{ color: "white", fontSize: "13px", fontWeight: 700 }}>2</span>
-              </div>
-              <span style={{ color: "white", fontSize: "13px", fontWeight: 500 }}>Order details</span>
-            </div>
-
-            {/* Step 3 */}
-            <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-              <div style={{ width: "36px", height: "36px", borderRadius: "50%", backgroundColor: "#0c1380", border: "1px solid rgba(255,255,255,0.2)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
-                <span style={{ color: "rgba(255,255,255,0.35)", fontSize: "13px", fontWeight: 700 }}>3</span>
-              </div>
-              <span style={{ color: "rgba(255,255,255,0.35)", fontSize: "13px" }}>Payment</span>
-            </div>
-
-            {/* Step 4 */}
-            <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-              <div style={{ width: "36px", height: "36px", borderRadius: "50%", backgroundColor: "#0c1380", border: "1px solid rgba(255,255,255,0.2)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
-                <span style={{ color: "rgba(255,255,255,0.35)", fontSize: "13px", fontWeight: 700 }}>4</span>
-              </div>
-              <span style={{ color: "rgba(255,255,255,0.35)", fontSize: "13px" }}>Confirmation</span>
-            </div>
+            {/* Previous step */}
+            <button style={{ display: "flex", alignItems: "center", gap: "7px", color: "rgba(255,255,255,0.5)", fontSize: "13px", background: "none", border: "none", cursor: "pointer" }}>
+              <svg width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                <path d="M19 12H5M12 5l-7 7 7 7" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+              Previous step
+            </button>
           </div>
-
-          {/* Previous step */}
-          <button style={{ display: "flex", alignItems: "center", gap: "7px", color: "rgba(255,255,255,0.6)", fontSize: "13px", background: "none", border: "none", cursor: "pointer" }}>
-            <svg width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-              <path d="M19 12H5M12 5l-7 7 7 7" strokeLinecap="round" strokeLinejoin="round"/>
-            </svg>
-            Previous step
-          </button>
         </div>
       </header>
 
@@ -214,20 +218,24 @@ export default function Home() {
       {/* ════════════════════════════════════
           DIVISOR diagonal
       ════════════════════════════════════ */}
-      <div style={{ width: "100%", height: "20px", backgroundColor: "#dde1ec", overflow: "hidden" }}>
-        <svg width="100%" height="20" preserveAspectRatio="none" viewBox="0 0 1400 20">
-          {Array.from({ length: 200 }).map((_, i) => (
-            <rect
-              key={i}
-              x={i * 7 + 2}
-              y={7}
-              width={5}
-              height={5}
-              transform={`rotate(45 ${i * 7 + 4.5} 9.5)`}
-              fill="#b8bed4"
-            />
-          ))}
-        </svg>
+      <div style={{ padding: "0 40px", backgroundColor: "#eceff5" }}>
+        <div style={{ maxWidth: "980px", margin: "0 auto", paddingTop: "32px", paddingBottom: "32px" }}>
+          <div style={{ width: "100%", height: "20px", backgroundColor: "#dde1ec", overflow: "hidden", borderRadius: "4px" }}>
+            <svg width="100%" height="20" preserveAspectRatio="none" viewBox="0 0 1400 20">
+              {Array.from({ length: 200 }).map((_, i) => (
+                <rect
+                  key={i}
+                  x={i * 7 + 2}
+                  y={7}
+                  width={5}
+                  height={5}
+                  transform={`rotate(45 ${i * 7 + 4.5} 9.5)`}
+                  fill="#b8bed4"
+                />
+              ))}
+            </svg>
+          </div>
+        </div>
       </div>
 
       {/* ════════════════════════════════════
