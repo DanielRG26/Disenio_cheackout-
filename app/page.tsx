@@ -8,7 +8,7 @@ export default function Home() {
       <header style={{ backgroundColor: "#0c1380" }}>
 
         {/* Top navbar - centrado */}
-        <div style={{ padding: "18px 40px" }}>
+        <div className="header-top" style={{ padding: "18px 40px" }}>
           <div style={{ maxWidth: "980px", margin: "0 auto", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
             <button style={{ display: "flex", alignItems: "center", gap: "8px", color: "rgba(255,255,255,0.75)", fontSize: "13px", background: "none", border: "none", cursor: "pointer" }}>
               <svg width="15" height="15" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
@@ -17,7 +17,7 @@ export default function Home() {
               Go Back
             </button>
             
-            <span style={{ color: "white", fontWeight: 900, fontSize: "26px", letterSpacing: "6px" }}>2019</span>
+            <span className="year-text" style={{ color: "white", fontWeight: 900, fontSize: "26px", letterSpacing: "6px" }}>2019</span>
             
             <button style={{ background: "none", border: "none", cursor: "pointer", display: "flex", flexDirection: "column", gap: "5px" }}>
               <span style={{ display: "block", width: "22px", height: "2px", backgroundColor: "white" }}></span>
@@ -27,9 +27,10 @@ export default function Home() {
         </div>
 
         {/* Stepper - más compacto */}
-        <div style={{ padding: "0 40px", paddingBottom: "28px" }}>
-          <div style={{ maxWidth: "980px", margin: "0 auto", backgroundColor: "#1a2db5", borderRadius: "12px", padding: "20px 36px", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-            <div style={{ display: "flex", alignItems: "center", gap: "32px" }}>
+        <div className="content-padding stepper-container" style={{ padding: "0 40px", paddingBottom: "28px" }}>
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 300px", gap: "24px", maxWidth: "980px", margin: "0 auto" }}>
+            <div style={{ gridColumn: "1 / -1", backgroundColor: "#1a2db5", borderRadius: "8px", padding: "20px 36px", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+            <div className="stepper-steps" style={{ display: "flex", alignItems: "center", gap: "32px" }}>
 
               {/* Step 1 ✓ */}
               <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
@@ -38,7 +39,7 @@ export default function Home() {
                     <path d="M5 13l4 4L19 7" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
                 </div>
-                <span style={{ color: "white", fontSize: "13px", fontWeight: 500 }}>Personal details</span>
+                <span className="step-text" style={{ color: "white", fontSize: "13px", fontWeight: 500 }}>Personal details</span>
               </div>
 
               {/* Step 2 - activo */}
@@ -46,7 +47,7 @@ export default function Home() {
                 <div style={{ width: "34px", height: "34px", borderRadius: "50%", border: "2px solid white", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
                   <span style={{ color: "white", fontSize: "13px", fontWeight: 700 }}>2</span>
                 </div>
-                <span style={{ color: "white", fontSize: "13px", fontWeight: 500 }}>Order details</span>
+                <span className="step-text" style={{ color: "white", fontSize: "13px", fontWeight: 500 }}>Order details</span>
               </div>
 
               {/* Step 3 */}
@@ -54,7 +55,7 @@ export default function Home() {
                 <div style={{ width: "34px", height: "34px", borderRadius: "50%", backgroundColor: "rgba(12,19,128,0.4)", border: "1px solid rgba(255,255,255,0.2)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
                   <span style={{ color: "rgba(255,255,255,0.4)", fontSize: "13px", fontWeight: 700 }}>3</span>
                 </div>
-                <span style={{ color: "rgba(255,255,255,0.4)", fontSize: "13px" }}>Payment</span>
+                <span className="step-text" style={{ color: "rgba(255,255,255,0.4)", fontSize: "13px" }}>Payment</span>
               </div>
 
               {/* Step 4 */}
@@ -62,7 +63,7 @@ export default function Home() {
                 <div style={{ width: "34px", height: "34px", borderRadius: "50%", backgroundColor: "rgba(12,19,128,0.4)", border: "1px solid rgba(255,255,255,0.2)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
                   <span style={{ color: "rgba(255,255,255,0.4)", fontSize: "13px", fontWeight: 700 }}>4</span>
                 </div>
-                <span style={{ color: "rgba(255,255,255,0.4)", fontSize: "13px" }}>Confirmation</span>
+                <span className="step-text" style={{ color: "rgba(255,255,255,0.4)", fontSize: "13px" }}>Confirmation</span>
               </div>
             </div>
 
@@ -74,17 +75,18 @@ export default function Home() {
               Previous step
             </button>
           </div>
+          </div>
         </div>
       </header>
 
       {/* ════════════════════════════════════
           MAIN — grid 2 columnas
       ════════════════════════════════════ */}
-      <main style={{ padding: "32px 40px", backgroundColor: "#eceff5" }}>
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 300px", gap: "24px", maxWidth: "980px", margin: "0 auto" }}>
+      <main className="main-content" style={{ padding: "32px 40px", backgroundColor: "#eceff5" }}>
+        <div className="main-grid" style={{ display: "grid", gridTemplateColumns: "1fr 300px", gap: "24px", maxWidth: "980px", margin: "0 auto" }}>
 
           {/* ── Panel izquierdo: Order Items ── */}
-          <div style={{ backgroundColor: "white", borderRadius: "16px", padding: "32px", boxShadow: "0 1px 8px rgba(0,10,60,0.07)" }}>
+          <div style={{ backgroundColor: "white", borderRadius: "8px", padding: "32px", boxShadow: "0 1px 8px rgba(0,10,60,0.07)" }}>
 
             {/* Cabecera */}
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "8px" }}>
@@ -174,7 +176,7 @@ export default function Home() {
           <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
 
             {/* Summary card */}
-            <div style={{ backgroundColor: "white", borderRadius: "16px", padding: "24px", boxShadow: "0 1px 8px rgba(0,10,60,0.07)" }}>
+            <div style={{ backgroundColor: "white", borderRadius: "8px", padding: "24px", boxShadow: "0 1px 8px rgba(0,10,60,0.07)" }}>
               <h2 style={{ fontSize: "17px", fontWeight: 700, color: "#111827", margin: "0 0 4px" }}>Summary</h2>
               <p style={{ fontSize: "11.5px", color: "#aab3cc", lineHeight: "1.65", margin: "0 0 20px" }}>
                 The total cost consist of the tax,<br/>insurance and the delivery charge.
@@ -200,7 +202,7 @@ export default function Home() {
             </div>
 
             {/* Delivery card */}
-            <div style={{ backgroundColor: "white", borderRadius: "16px", padding: "18px 24px", boxShadow: "0 1px 8px rgba(0,10,60,0.07)", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+            <div style={{ backgroundColor: "white", borderRadius: "8px", padding: "18px 24px", boxShadow: "0 1px 8px rgba(0,10,60,0.07)", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
               <span style={{ fontSize: "14px", fontWeight: 700, color: "#111827" }}>Delivery</span>
               <button style={{ width: "30px", height: "30px", borderRadius: "50%", border: "1.5px solid #d5daea", background: "none", cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "18px", color: "#7c8baa", lineHeight: 1 }}>
                 +
@@ -218,7 +220,7 @@ export default function Home() {
       {/* ════════════════════════════════════
           DIVISOR diagonal
       ════════════════════════════════════ */}
-      <div style={{ padding: "0 40px", backgroundColor: "#eceff5" }}>
+      <div className="content-padding" style={{ padding: "0 40px", backgroundColor: "#eceff5" }}>
         <div style={{ maxWidth: "980px", margin: "0 auto", paddingTop: "32px", paddingBottom: "32px" }}>
           <div style={{ width: "100%", height: "20px", backgroundColor: "#dde1ec", overflow: "hidden", borderRadius: "4px" }}>
             <svg width="100%" height="20" preserveAspectRatio="none" viewBox="0 0 1400 20">

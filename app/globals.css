@@ -1,3 +1,41 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .stepper-container {
+    overflow-x: auto;
+  }
+  
+  .stepper-steps {
+    min-width: 600px;
+  }
+  
+  .step-text {
+    display: none !important;
+  }
+  
+  .main-grid {
+    grid-template-columns: 1fr !important;
+  }
+  
+  .header-top {
+    padding: 18px 20px !important;
+  }
+  
+  .content-padding {
+    padding: 0 20px !important;
+  }
+  
+  .main-content {
+    padding: 24px 20px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .year-text {
+    font-size: 20px !important;
+    letter-spacing: 4px !important;
+  }
+}
